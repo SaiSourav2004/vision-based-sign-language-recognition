@@ -1,0 +1,10 @@
+opencv-python
+streamlit
+streamlit-webrtc
+opencv-python-headless
+av
+mediapipe
+numpy
+scikit-image
+scikit-learn
+joblib
