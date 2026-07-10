@@ -3,7 +3,7 @@ streamlit-webrtc==0.63.11
 
 opencv-python-headless==4.10.0.84
 
-av==12.3.0
+av==14.0.1
 
 numpy
 pandas
@@ -12,6 +12,6 @@ joblib
 matplotlib
 seaborn
 
-mediapipe==0.10.21
+mediapipe==0.10.14
 
 scikit-image
