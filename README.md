@@ -1,25 +1,3 @@
-# Real-Time Sign Language Gesture Recognition System
-
-A production-quality, highly modular computer vision pipeline designed to execute high-speed hand tracking, extract Histograms of Oriented Gradients (HOG) features, and perform gesture classification across 37 custom character states using an optimized Random Forest classifier model.
-
-## Directory Structural Layout Mapping
-```text
-sign_language_project/
-│
-├── models/
-│   ├── sign_language_model.pkl   # Serialized Random Forest Classifier binary weight matrix
-│   ├── scaler.pkl                 # StandardScaler parameter definitions mapping profile
-│   └── label_encoder.pkl          # Target label alphanumeric decoding mapping matrix
-│
-├── config.py                      # Central repository holding hyperparameter constants
-├── predictor.py                   # Isolated object class engine containing core model pipelines
-├── utils.py                       # Helper utility functions managing array crops and drawing logic
-├── detect_app.py                  # Stream framework driving real-time frame operations loops
-├── requirements.txt               # Pinned package versions installation registry blueprint
-└── README.md                      # Operational configuration documentation blueprint manual
-
-
-Markdown
 <div align="center">
 
 # 🤟 Vision-Based Sign Language Recognition System
