@@ -15,8 +15,9 @@
 ---
 
 <!-- 💡 PRO TIP: Record a 10-second GIF of your working Streamlit app and replace the link below -->
-<img src="https://via.placeholder.com/800x400/1A202C/4A90E2?text=Insert+Demo+GIF+Here" alt="Project Demo" width="800"/>
-<img width="1912" height="921" alt="image" src="https://github.com/user-attachments/assets/c17e6be8-7d7f-4951-8d72-4d5d10609b0e" />
+<!-- <img src="https://via.placeholder.com/800x400/1A202C/4A90E2?text=Insert+Demo+GIF+Here" alt="Project Demo" width="800"/> -->
+<img width="1639" height="960" alt="ChatGPT Image Jul 14, 2026, 07_35_01 PM" src="https://github.com/user-attachments/assets/bd34ff68-6337-472a-8eb8-ca63b3c939a4" />
+
 
 </div>
 
