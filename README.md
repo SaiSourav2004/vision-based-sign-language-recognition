@@ -16,6 +16,7 @@
 
 <!-- 💡 PRO TIP: Record a 10-second GIF of your working Streamlit app and replace the link below -->
 <img src="https://via.placeholder.com/800x400/1A202C/4A90E2?text=Insert+Demo+GIF+Here" alt="Project Demo" width="800"/>
+<img width="1912" height="921" alt="image" src="https://github.com/user-attachments/assets/c17e6be8-7d7f-4951-8d72-4d5d10609b0e" />
 
 </div>
 
