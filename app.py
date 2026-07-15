@@ -1,10 +1,9 @@
 import streamlit as st
+import cv2
 
-st.title("Deployment Test Successful")
+st.write("OpenCV Loaded")
+st.write(cv2.__version__)
 st.stop()
-
-
-
 
 
 
