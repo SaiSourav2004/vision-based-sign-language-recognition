@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: vision-based-sign-language-recognition
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
