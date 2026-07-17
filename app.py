@@ -338,7 +338,7 @@ with col_cam:
         rtc_configuration=RTC_CONFIGURATION,
         video_processor_factory=VideoProcessor,
         media_stream_constraints={"video": True, "audio": False},
-        async_processing=True,
+        async_processing=False,
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -366,39 +366,39 @@ st.info("Webcam Feed ➔ MediaPipe HandLandmarker ➔ Square ROI Crop ➔ Graysc
 # ==========================================
 # BACKGROUND THREAD POLLING (Must be at the very bottom)
 # ==========================================
-if ctx.state.playing:
+# if ctx.state.playing:
     
-    # Variables to track gesture changes for the subtle animation
-    previous_gesture = "Waiting..."
-    last_change_time = 0
+#     # Variables to track gesture changes for the subtle animation
+#     previous_gesture = "Waiting..."
+#     last_change_time = 0
     
-    while ctx.state.playing:
-        if ctx.video_processor:
-            g = ctx.video_processor.current_gesture
-            c = ctx.video_processor.current_confidence
-            f = ctx.video_processor.current_fps
+#     while ctx.state.playing:
+#         if ctx.video_processor:
+#             g = ctx.video_processor.current_gesture
+#             c = ctx.video_processor.current_confidence
+#             f = ctx.video_processor.current_fps
             
-            # Detect gesture change and timestamp it
-            if g != previous_gesture:
-                previous_gesture = g
-                last_change_time = time.time()
+#             # Detect gesture change and timestamp it
+#             if g != previous_gesture:
+#                 previous_gesture = g
+#                 last_change_time = time.time()
             
-            # Apply the CSS animation class if the gesture changed within the last 0.4 seconds
-            anim_class = "gesture-changed" if (time.time() - last_change_time) < 0.4 else ""
+#             # Apply the CSS animation class if the gesture changed within the last 0.4 seconds
+#             anim_class = "gesture-changed" if (time.time() - last_change_time) < 0.4 else ""
             
-            with analytics_placeholder.container():
-                st.markdown(f"""
-                    <div class="gesture-card">
-                        <p class="gesture-title">Predicted Gesture</p>
-                        <span class="gesture-value {anim_class}">{g}</span>
-                    </div>
-                    <div class="live-card">
-                        <p class="live-label">Confidence Score</p>
-                        <p class="live-value">{c*100:.1f}%</p>
-                    </div>
-                    <div class="live-card">
-                        <p class="live-label">System FPS</p>
-                        <p class="live-value">{f}</p>
-                    </div>
-                """, unsafe_allow_html=True)
-        time.sleep(0.1) # Sleep to free up the thread and prevent browser crashing
+#             with analytics_placeholder.container():
+#                 st.markdown(f"""
+#                     <div class="gesture-card">
+#                         <p class="gesture-title">Predicted Gesture</p>
+#                         <span class="gesture-value {anim_class}">{g}</span>
+#                     </div>
+#                     <div class="live-card">
+#                         <p class="live-label">Confidence Score</p>
+#                         <p class="live-value">{c*100:.1f}%</p>
+#                     </div>
+#                     <div class="live-card">
+#                         <p class="live-label">System FPS</p>
+#                         <p class="live-value">{f}</p>
+#                     </div>
+#                 """, unsafe_allow_html=True)
+#         time.sleep(0.1) # Sleep to free up the thread and prevent browser crashing
